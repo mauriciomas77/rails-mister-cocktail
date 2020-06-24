@@ -7,6 +7,7 @@
     <p> <%= dose.ingredient.name %> - <%= dose.description %> <%= link_to ('<i class="fas fa-trash"></i>').html_safe, dose_path(dose), method: :delete %></p>
     <% end %>
   <% end %>
+  <%= cl_image_tag @cocktail.photo.key, height: 300, width: 400, crop: :fill %>
   <%= link_to 'Add dose', new_cocktail_dose_path(@cocktail)  %>  <%= link_to 'Add review', new_cocktail_review_path(@cocktail)  %>
   <h4>Recent reviews</h4>
     <ul class="list-group">
